@@ -1,0 +1,631 @@
+/*====================================== Fonts =========================================*/
+/* MuseoModerno */
+
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../font/MuseoModerno/MuseoModerno-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../font/MuseoModerno/MuseoModerno-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../font/MuseoModerno/MuseoModerno-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoModerno";
+  src: url("../font/MuseoModerno/MuseoModerno-Black.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Roboto */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto/Roboto-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto/Roboto-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto/Roboto-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto/Roboto-Black.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/*==================================== Variables CSS ====================================*/
+:root {
+  /*=========== Colors ===========*/
+  --first-color: #CD0102;
+  --second-color: #000000;
+  --third-color: #ffffff;
+  --fourth-color: #c8c8c8;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 23px ..... */
+  --big-font-size: 2.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 2.0rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1.25rem;
+  --small-font-size: 0.938rem;
+  --smaller-font-size: 0.813rem;
+
+  /*============ Font weight ============*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /*=========== Font ===========*/
+  --main-font: "MuseoModerno", sans-serif;
+  --sacend-font: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sacend-font);
+  
+}
+
+
+h1 {
+  font-family: var(--main-font);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-black);
+}
+
+h2 {
+  font-family: var(--main-font);
+  font-weight: var(--font-black);
+}
+
+p{
+  font-size: var(--normal-font-size);
+}
+
+/* ============ navbar============ */
+
+nav{
+  padding: 2rem 6rem;
+  font-weight: var(--font-black);
+}
+
+
+.nav_list  {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  flex-wrap: wrap
+}
+
+.nav_list a {
+  text-decoration: none;
+  color: var(--third-color);
+  font-family: var(--main-font);
+}
+
+
+.nav_list li {
+  padding: 15px 0;
+  text-transform: uppercase;
+  transform: translateY(0px);
+  animation: 2s ease forwards .5s;
+  margin-left: 1rem;
+}
+
+.nav_list li::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0px;
+  left: 0;
+  bottom: 10px;
+  background: var(--third-color); 
+  transition: all .5s ease;
+}
+
+.nav_list li:hover:before {
+  width: 100%;
+}
+
+
+
+@keyframes grow {
+  100% {
+    height: 90%;
+    width: 90%;
+ }
+}
+
+@keyframes fadeIn {
+100% {
+  opacity: 1;
+ }
+}
+
+/* ============ header ============ */
+.hero {
+  background: var(--first-color);
+  min-height: 100vh;
+  margin: 0px;
+}
+
+.hero_content {
+  display: grid;
+  place-items: center; /* Centers both horizontally & vertically */
+}
+
+.hero_content h1{
+  font-size: 12rem;
+  color: var(--third-color);
+}
+
+.hero_content img{
+  position: absolute;
+  width: 60vh;
+  margin-left: -30rem;
+  margin-top: 9rem;
+}
+
+.hero_content .text_hero1{
+  margin-left: -38rem;
+}
+
+.hero_content .text_hero2{
+  margin-left: 31rem;
+  line-height:6rem;
+}
+
+@media screen and (max-width:1300px){
+  .hero {
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+  .hero_content {
+    display: flex;
+    flex-direction: column;
+    place-items: center; /* Centers both horizontally & vertically */
+  }
+  .hero_content h1{
+    font-size: 10rem;
+    color: var(--fourth-color);
+  }
+  .hero_content img{
+    position:static;
+    width: 20vh;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+  .hero_content .text_hero1{
+    margin-left:0;
+  }
+  
+  .hero_content .text_hero2{
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width:800px){
+  .hero {
+    height: 100%;
+    padding-bottom: 1rem;
+  }
+  .hero_content {
+    display: flex;
+    flex-direction: column;
+    place-items: center; /* Centers both horizontally & vertically */
+  }
+  .hero_content h1{
+    font-size: 7rem;
+    color: var(--fourth-color);
+  }
+  .hero_content img{
+    position:static;
+    width: 25vw;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+  .hero_content .text_hero1{
+    margin-left:0;
+  }
+  
+  .hero_content .text_hero2{
+    margin-left: 0;
+  }
+
+
+  .img_hide{
+    display: none;
+  }
+}
+/* ============ logo section ============ */
+#logo{
+  background: var(--second-color);
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-evenly
+}
+
+#logo img{
+  height: 35px;
+}
+
+/* ============ home section ============ */
+#home{
+  padding: 2rem;
+  margin: 0px;
+}
+
+#home{
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  grid-template-areas:
+         "welcome box1"
+         "welcome box2";
+  align-items: stretch;
+}
+
+.home_box1{
+  grid-area: welcome;
+  background: var(--first-color);
+  color: var(--third-color);
+  padding: 2rem;
+}
+.home_box2{
+  grid-area: box1;
+  padding: 2rem;
+  background: var(--fourth-color);
+}
+.home_box3{
+  grid-area: box2;
+  padding: 2rem;
+  background: #e2e2e2;
+}
+.home_box3 a{
+  color: var(--second-color);
+}
+
+@media screen and (max-width:690px){
+  #home{
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.6fr 0.4fr;
+    grid-template-areas:
+           "welcome"
+           "box1"
+           "box2";
+  }
+}
+
+/* ============ details section ============ */
+.details_menu{
+  padding: 2rem;
+  margin: 0px;
+  background: var(--first-color);
+}
+
+.details_menu h1{
+  color: var(--third-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.details_menu_content{
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+         "technologies features fabrication electronics"
+         "technologies features fabrication electronics"
+         "technologies features fabrication electronics"
+         "technologies features fabrication electronics";
+  align-items: stretch;
+}
+
+.details_menu_list{
+  background: var(--third-color);
+}
+
+.details_menu_list h3{
+  font-family: var(--main-font);
+  font-weight: var(--font-black);
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+  line-height:1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.icon{
+  height: 45px;
+  margin-bottom: 0.8rem;
+}
+
+.details_menu .technologies{
+  grid-area: technologies;
+  padding: 2rem;
+}
+
+.details_menu .features{
+  grid-area: features;
+  padding: 2rem;
+}
+
+.details_menu .fabrication{
+  grid-area: fabrication;
+  padding: 2rem;
+}
+
+.details_menu .electronics{
+  grid-area: electronics;
+  padding: 2rem;
+}
+
+.details_menu button {
+  background-color: var(--second-color);
+  border-radius: 5px;
+  border-width: 0;
+  color: var(--third-color);
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  margin-top: 0.8rem;
+  padding: 8px;
+  text-align: center;
+}
+
+.details_menu button:hover{
+  background-color: var(--first-color);
+}
+ 
+@media screen and (max-width:980px){
+  .details_menu_content{
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+           "technologies technologies features features"
+           "technologies technologies features features"
+           "fabrication fabrication electronics electronics"
+           "fabrication fabrication electronics electronics";
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width:600px){
+  .details_menu_content{
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+           "technologies technologies technologies technologies"
+           "features features features features"
+           "fabrication fabrication fabrication fabrication"
+           "electronics electronics electronics electronics";
+    align-items: stretch;
+  }
+}
+
+#details h2{
+  font-size: var(--h2-font-size);
+}
+
+#technologies{
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--second-color);
+  color: var(--third-color);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+#details #technologies ol { 
+  padding-left: 50px; 
+}
+
+#details #technologies li { 
+  padding-left: 10px;
+  margin-top: 10px;
+  position: relative;
+  line-height: 30px;
+  
+  &:before {
+    content: '';
+    display: block;
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--first-color);
+    position: absolute;
+    top: -5px;
+    left: -40px;
+  }
+}
+
+li::marker {
+  color: var(--first-color);
+  font-family: var(--main-font);
+  font-size: var(--h3-font-size);
+}
+
+#details #technologies strong{
+  color: var(--first-color);
+  font-family: var(--main-font);
+  font-size: var(--h3-font-size);
+}
+
+#technologies img {
+  height: 47vh;
+}
+
+
+@media screen and (max-width:800px){
+  #technologies{
+    flex-direction: column-reverse
+  }
+  #technologies img {
+    height: auto;
+    width: 60vw;
+  }
+}
+
+#features{
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--fourth-color);
+}
+
+#features h2{
+  text-align: center;
+}
+
+.features_list{
+  grid-gap: 1rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.3fr 0.4fr 1.3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+         "features_1st features_img features_3rd"
+         "features_2nd features_img features_4th";
+  align-items: stretch;
+}
+
+.features_1st strong, .features_2nd strong, .features_3rd strong, .features_4th strong{
+  margin: 0%;
+  font-family: var(--main-font);
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+}
+
+.features_1st{
+  grid-area: features_1st;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.features_2nd{
+  grid-area: features_2nd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.features_3rd{
+  grid-area: features_3rd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.features_4th{
+  grid-area: features_4th;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.features_img{
+  grid-area: features_img;
+}
+
+.features_img img{
+  margin-top: 10vh;
+  width: 90vh;
+}
+
+.circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle p{
+  font-family: var(--main-font);
+  font-size: var(--h3-font-size);
+  color: var(--third-color);
+}
+
+@media screen and (max-width:1100px){
+  .features_img img{
+    margin-top: 0;
+    width: 100%;
+  }
+  .features_list{
+    grid-gap: 0.5rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.75fr 0.75fr 0.75fr 0.75fr;
+    grid-template-areas:
+           "features_img"
+           "features_1st"
+           "features_2nd"
+           "features_3rd"
+           "features_4th";
+  }
+  .features_1st, .features_2nd, .features_3rd, .features_4th, .features_img{
+    width: 70vw;
+  }
+}
+
+#fabrication{
+  padding: 2rem;
+  margin: 0px;
+  background-color: var(--first-color);
+}
