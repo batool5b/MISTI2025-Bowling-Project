@@ -223,7 +223,6 @@ nav{
   }
   .hero_content h1{
     font-size: 10rem;
-    color: var(--fourth-color);
   }
   .hero_content img{
     position:static;
@@ -252,7 +251,7 @@ nav{
   }
   .hero_content h1{
     font-size: 7rem;
-    color: var(--fourth-color);
+    
   }
   .hero_content img{
     position:static;
@@ -628,4 +627,125 @@ li::marker {
   padding: 2rem;
   margin: 0px;
   background-color: var(--first-color);
+}
+
+#fabrication h2{
+  color: var(--third-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.fabrication_item{
+  grid-gap: 1rem;
+  display: grid;
+  justify-items: center;
+  align-items: stretch;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "bowling_pins bowling_pins flywheels flywheels body_cover body_cover"
+    "bowling_alley bowling_alley bowling_alley mechanism_box mechanism_box mechanism_box";
+}
+
+.fabrication_3d_pins{
+  grid-area: bowling_pins;
+}
+
+.fabrication_3d_flywheels{
+  grid-area: flywheels;
+}
+
+.fabrication_laser_alley{
+  grid-area: bowling_alley;
+}
+
+.fabrication_laser_body{
+  grid-area: body_cover;
+}
+
+.fabrication_laser_box{
+  grid-area: mechanism_box;
+}
+
+.fabrication_item_card{
+  background-color: var(--third-color);
+  width: 80%;
+  padding: 1rem;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fabrication_img{
+  position: relative;
+}
+
+.fabrication_img img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tag {
+  font-family: var(--main-font);
+  font-weight: var(--font-medium);
+  font-size: var(--smaller-font-size);
+  padding: 0 0.5rem;
+  border-radius: 50px;
+  left: 4px;
+  bottom: 8px;
+  position: absolute;
+}
+
+.fabrication_3d{
+  background-color: var(--first-color);
+  color: var(--third-color);
+}
+
+.fabrication_laser{
+  background-color: var(--second-color);
+  color: var(--third-color);
+}
+
+.fabrication_item_card h3{
+  font-family: var(--main-font);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-black);
+}
+
+@media screen and (max-width:850px){
+  .fabrication_item{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "bowling_pins"
+      "flywheels"
+      "body_cover"
+      "bowling_alley"
+      "mechanism_box";
+  }
+  .fabrication_item_card{
+    width: 80%;
+    flex-direction: row;
+  }
+
+  .fabrication_img img{
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width:600px){
+  .fabrication_item_card{
+    flex-direction: column;
+  }
+
+  .fabrication_img img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
 }
