@@ -242,7 +242,7 @@ nav{
 @media screen and (max-width:800px){
   .hero {
     height: 100%;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
   }
   .hero_content {
     display: flex;
@@ -482,7 +482,7 @@ nav{
   }
 }
 
-li::marker {
+#details #technologies li::marker {
   color: var(--first-color);
   font-family: var(--main-font);
   font-size: var(--h3-font-size);
@@ -747,5 +747,80 @@ li::marker {
     height: 200px;
     object-fit: cover;
     margin-right: 1rem;
+  }
+}
+
+#electronics{
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  margin: 0px;
+}
+
+#electronics h2{
+  color: var(--first-color);
+}
+
+
+.electronics_overview{
+  width: 1500px;
+}
+
+.electronics_components{
+  padding-left: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.electronics_card{
+  padding: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.electronics_card h3{
+  font-family: var(--main-font);
+  font-size: var(--h3-font-size);
+}
+
+.electronics_card li{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.electronics_components img{
+  width: 100px;
+}
+
+.motion_control{
+  background-color: #e2e2e2;;
+}
+
+.user_input{
+  background-color: var(--first-color);
+}
+
+.microcontroller{
+  background-color: var(--second-color);
+  color: var(--third-color);
+}
+
+.power{
+  background-color: var(--fourth-color);
+}
+
+@media screen and (max-width:1024px){
+  #electronics{
+    flex-direction: column;
+  }
+  .electronics_overview{
+    width: 100%;
+  }
+
+  .electronics_components{
+    padding-top: 2.25rem;
+    padding-left: 0rem;
   }
 }

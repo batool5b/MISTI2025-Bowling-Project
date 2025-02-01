@@ -195,10 +195,64 @@
             <p>Constructed using finger joints and glowing wood as a ball track to control its movement.</p>
           </div>
         </div>
-
       </div>
     </section>
 
     <section id="electronics">
+      <div class="electronics_overview">
+        <h2>Electronics & Control System:</h2>
+        <p>The electronics and control system of WeBowling is designed to enable precise motorized control for 
+          launching the bowling ball, ensuring smooth and interactive gameplay. The system integrates Arduino, 
+          stepper and DC motors, motor drivers, and joystick-based controls to bring the game to life.</p>
+      </div>
+      <div class="electronics_components">
+        <div class="electronics_card microcontroller">
+          <img src="media/images/microcontroller.png" alt="microcontroller">
+          <div class="electronics_card_body">
+            <h3>Microcontroller</h3>
+            <ul>
+              <li>Arduino UNO R3 (*1): The brain of the system, processing inputs and controlling the motors.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="electronics_card motion_control">
+          <img src="media/images/motion_control.png" alt="motion_control">
+          <div class="electronics_card_body">
+            <h3>Motion Control System</h3>
+            <ul>
+              <li>Stepper Motor (NEMA 17 Bipolar) (*1):  Controls the movement of the box from right to left and vice versa, ensuring
+               precise ball positioning and launch mechanism.</li>
+              <li>RS390 DC Motors (*2): Drives the flywheel system to apply the necessary force for launching the ball.</li>
+              <li>L298N Dual H-Bridge Motor Driver (*3): Controls the stepper and DC motors by regulating power and direction, and 
+              enables smooth acceleration and deceleration of the flywheels.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="electronics_card user_input">
+          <img src="media/images/user_input.png" alt="user_input">
+          <div class="electronics_card_body">
+            <h3>User Input & Interaction</h3>
+            <ul>
+            <li>KY-023 Dual Axis Joystick Module (*1): Enables players to adjust the direction and operate the launch 
+              mechanism remotely. The motor can be moved left and right to direct the box and moved forward to launch the ball.</li>
+            <li>Rotary Potentiometer (*1): Adjusts the speed and power of the ball launch.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="electronics_card power">
+          <img src="media/images/power.png" alt="power">
+          <div class="electronics_card_body">
+          <h3>Power Management</h3>
+          <ul>
+            <li>Laboratory Power Supply Unit (*1): Ensures stable voltage for DC and Stepper Motor to all electronic components, 
+              preventing power fluctuations.</li>
+            <li>USB A Male to B Male Cable (*1): Ensures stable voltage for Arduino UNO.</li>
+          </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </section>
