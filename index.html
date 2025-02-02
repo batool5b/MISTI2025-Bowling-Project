@@ -211,7 +211,7 @@
           <div class="electronics_card_body">
             <h3>Microcontroller</h3>
             <ul>
-              <li>Arduino UNO R3 (*1): The brain of the system, processing inputs and controlling the motors.</li>
+              <li>Arduino UNO R3: The brain of the system, processing inputs and controlling the motors.</li>
             </ul>
           </div>
         </div>
@@ -221,10 +221,10 @@
           <div class="electronics_card_body">
             <h3>Motion Control System</h3>
             <ul>
-              <li>Stepper Motor (NEMA 17 Bipolar) (*1):  Controls the movement of the box from right to left and vice versa, ensuring
+              <li>NEMA 17 Bipolar Stepper Motor :  Controls the movement of the box from right to left and vice versa, ensuring
                precise ball positioning and launch mechanism.</li>
-              <li>RS390 DC Motors (*2): Drives the flywheel system to apply the necessary force for launching the ball.</li>
-              <li>L298N Dual H-Bridge Motor Driver (*3): Controls the stepper and DC motors by regulating power and direction, and 
+              <li>RS390 DC Motors : Drives the flywheel system to apply the necessary force for launching the ball.</li>
+              <li>L298N Dual H-Bridge Motor Driver : Controls the stepper and DC motors by regulating power and direction, and 
               enables smooth acceleration and deceleration of the flywheels.</li>
             </ul>
           </div>
@@ -235,9 +235,9 @@
           <div class="electronics_card_body">
             <h3>User Input & Interaction</h3>
             <ul>
-            <li>KY-023 Dual Axis Joystick Module (*1): Enables players to adjust the direction and operate the launch 
+            <li>KY-023 Dual Axis Joystick Module : Enables players to adjust the direction and operate the launch 
               mechanism remotely. The motor can be moved left and right to direct the box and moved forward to launch the ball.</li>
-            <li>Rotary Potentiometer (*1): Adjusts the speed and power of the ball launch.</li>
+            <li>Rotary Potentiometer : Adjusts the speed and power of the ball launch.</li>
             </ul>
           </div>
         </div>
@@ -247,12 +247,321 @@
           <div class="electronics_card_body">
           <h3>Power Management</h3>
           <ul>
-            <li>Laboratory Power Supply Unit (*1): Ensures stable voltage for DC and Stepper Motor to all electronic components, 
+            <li>Laboratory Power Supply Unit : Ensures stable voltage for DC and Stepper Motor to all electronic components, 
               preventing power fluctuations.</li>
-            <li>USB A Male to B Male Cable (*1): Ensures stable voltage for Arduino UNO.</li>
+            <li>USB A Male to B Male Cable : Ensures stable voltage for Arduino UNO.</li>
           </ul>
           </div>
         </div>
       </div>
     </section>
   </section>
+
+  <section id="guide">
+    <h1>Guide: How to Build WeBowling</h1>
+    <div class="guide_introduction">
+      <h2>Introduction</h2>
+      <p>This circuit is designed to control a stepper motor and two DC motors using an Arduino UNO microcontroller. 
+        The stepper motor is driven by an L298N DC motor driver, which the Arduino controls through digital pins. The DC motors 
+        are also connected to separate L298N motor drivers for independent control. A rotary potentiometer is used to adjust the 
+        speed of the motors, and a KY-023 Dual Axis Joystick Module is used for directional control. The power supply provides 
+        the necessary voltage to the motor drivers and the Arduino.</p>
+    </div>
+
+    <div class="guide_material">
+      <h2>Materials & Tools</h2>
+      <p>You will require the following hardware to make Arduino WeBowling.</p>
+      <table>
+        <tr>
+          <th>S.no</th>
+          <th>Component</th>
+          <th>Value</th>
+          <th>Qty</th>
+        </tr>
+        <tr>
+          <td>1.</td>
+          <td>Arduino</td>
+          <td>UNO R3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>Stepper Motor</td>
+          <td>NEMA 17 Bipolar</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td>DC Motors</td>
+          <td>RS390</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>4.</td>
+          <td>L298N Dual H-Bridge Motor Driver</td>
+          <td>-</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>5.</td>
+          <td>Joystick Module</td>
+          <td>KY-023 Dual Axis</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>6.</td>
+          <td>Rotary Potentiometer</td>
+          <td>20K Ohm</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>7.</td>
+          <td>Jumper Wires</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>8.</td>
+          <td>Breadboard</td>
+          <td>170 point</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>9.</td>
+          <td>Linear bearings</td>
+          <td>-</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>10.</td>
+          <td>Stainless steel bars</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>11.</td>
+          <td>Threaded rod</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>12.</td>
+          <td>Copper Nut</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>13.</td>
+          <td>Flexible Coupling Coupler</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>14.</td>
+          <td>L Bracket Stainless</td>
+          <td>1" x 1/2" ZINC</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>15.</td>
+          <td>Laboratory Power Supply Unit</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>16.</td>
+          <td>Banana Plug to Alligator Clip Test Lead Wire Cable</td>
+          <td>-</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>17.</td>
+          <td>USB A Male to B Male Cable</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>18.</td>
+          <td>3D Printer Filament</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>19.</td>
+          <td>Wood</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>20.</td>
+          <td>Wood glue</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="guide_Steps">
+      <h2>Steps for Making WeBowling</h2>
+      <p>In the making of this WeBowling, first, print bowling pins, flywheels, and laser cutting the body cover, as well 
+        as the bowling alley and mechanism box. Then, assemble the bowling alley. With just an Arduino, a DC motor, a 
+        stepper motor, a dual H-Bridge motor driver, a rotary potentiometer, and a joystick module, you can follow the 
+        steps to build a circuit.</p>
+      <h3>Schematic</h3>
+      <p>Make connections according to the circuit diagram given below.</p>
+      <img src="media/images/circuit_image.png" alt="circuit_image" style="height:100%;">
+      <h3>Installing Arduino IDE & libraries</h3>
+      <p>First, you need to install Arduino IDE Software from its official website Arduino.</p>
+      <p>Then, For this project, we use the Stepper library to control the stepper motor. Follow these steps:</p>
+      <ol>
+        <li>Open Arduino IDE.</li>
+        <li>Go to Sketch → Include Library → Manage Libraries.</li>
+        <li>Search for "Stepper" and install the Stepper Library.</li>
+      </ol>
+      <h3>Code</h3>
+      <p>Now copy the following code and upload it to Arduino IDE Software.</p>
+      <pre class="code-block">
+<code>// Include necessary libraries
+#include &lt;Stepper.h&gt; // Arduino Stepper Library
+
+// Pin definitions for motor control
+const int ENA = 5; // PWM pin for motor A speed control
+const int IN1 = 6;  // Direction pin 1 for motor A
+const int IN2 = 7;  // Direction pin 2 for motor A
+const int IN3 = 8;  // Direction pin 1 for motor B
+const int IN4 = 9;  // Direction pin 2 for motor B+
+const int ENB = 10;  // PWM pin for motor B speed control
+
+// Analog joystick pins
+const int X_PIN = A3;
+const int Y_PIN = A4;
+
+// Potentiometer pin for speed control
+const int SPEED_CONTROL = A0;
+
+// Stepper motor constants
+const int STEPS_PER_REV = 255;
+Stepper stepper_NEMA17(STEPS_PER_REV, 1, 2, 3, 4); // Initialize Stepper
+
+// Threshold values
+const int THRESHOLD_TURN_RIGHT = 4;
+const int THRESHOLD_TURN_LEFT = 1000;
+const int NEUTRAL_THRESHOLD_MIN = 450;
+const int NEUTRAL_THRESHOLD_MAX = 550;
+const int FORWARD_THRESHOLD = 6;
+
+// Motor speed range
+const int MIN_SPEED = 0;
+const int MAX_SPEED = 80;
+
+// Function to stop DC motors
+void stopDCMotors() {
+  analogWrite(ENA, 0);
+  analogWrite(ENB, 0);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+}
+
+// Function to drive motors forward
+void driveForward(int speed) {
+  analogWrite(ENA, speed); // Set motor A speed
+  analogWrite(ENB, speed); // Set motor B speed
+  digitalWrite(IN1, HIGH); // Motor A forward
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH); // Motor B forward
+  digitalWrite(IN4, LOW);
+}
+
+// Function to stop the stepper motor
+void stopStepperMotor() {
+  // Fully de-energize the stepper motor coils
+  digitalWrite(1, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+}
+
+void setup() {
+  // Initialize Serial communication for debugging
+  Serial.begin(115200);
+
+  // Set joystick pins as inputs
+  pinMode(X_PIN, INPUT);
+  pinMode(Y_PIN, INPUT);
+
+  // Set motor control pins as outputs
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+
+  // Stop motors at the start
+  stopDCMotors();
+  stopStepperMotor();
+
+  Serial.println("Setup complete.");
+  delay(100); // Short delay for setup stabilization
+}
+
+void loop() {
+  // Read joystick values
+  int xData = analogRead(X_PIN);
+  int yData = analogRead(Y_PIN);
+
+  // Debug joystick data
+  Serial.print("X-Data: ");
+  Serial.print(xData);
+  Serial.print("\tY-Data: ");
+  Serial.print(yData);
+
+  // Read potentiometer and map to motor speed
+  int sensorReading = analogRead(SPEED_CONTROL);
+  int motorSpeed = map(sensorReading, 0, 1023, MIN_SPEED, MAX_SPEED);
+
+  // Control stepper motor based on joystick Y-axis
+  if (yData < THRESHOLD_TURN_RIGHT) { // Turning right
+    Serial.print(" | Action: Turning Right");
+    if (motorSpeed > 0) {
+      stepper_NEMA17.setSpeed(motorSpeed); // Set speed
+      stepper_NEMA17.step(-STEPS_PER_REV); // Turn right
+    }
+  } else if (yData > THRESHOLD_TURN_LEFT) { // Turning left
+    Serial.print(" | Action: Turning Left");
+    if (motorSpeed > 0) {
+      stepper_NEMA17.setSpeed(motorSpeed); // Set speed
+      stepper_NEMA17.step(STEPS_PER_REV); // Turn left
+    }
+  } else if (xData < FORWARD_THRESHOLD) { // Moving forward
+    Serial.print(" | Action: Moving Forward");
+    driveForward(255); // Full speed forward
+    delay(3000); // Move forward for 3 seconds
+    stopDCMotors(); // Stop after moving forward
+  } else if (xData >= NEUTRAL_THRESHOLD_MIN && xData <= NEUTRAL_THRESHOLD_MAX &&
+             yData >= NEUTRAL_THRESHOLD_MIN && yData <= NEUTRAL_THRESHOLD_MAX) {
+    // Joystick in neutral position
+    Serial.print(" | Action: Neutral - Stopping Stepper Motor");
+    stopStepperMotor(); // Stop the stepper motor
+  } else {
+    Serial.print(" | Action: Stopped");
+    stopDCMotors(); // Stop all motors
+    stopStepperMotor(); // Stop the stepper motor
+  }
+
+  Serial.println(""); // Newline for debug readability
+  delay(100); // Short delay for loop stabilization
+}</code>
+        <button class="copy-btn">Copy</button>
+      </pre>
+      <div class="code_download">
+        <a href="assets/arduino_code/WeBowling/WeBowling.ino" download><button>Download the code</button></a>
+      </div>
+    </div>
+  </section>
+  
+  <script src="assets/js/copy-btn.js"></script>
+</body>  
+</html>

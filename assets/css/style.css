@@ -1,4 +1,6 @@
 /*====================================== Fonts =========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 /* MuseoModerno */
 
 @font-face {
@@ -93,6 +95,7 @@
   /*=========== Font ===========*/
   --main-font: "MuseoModerno", sans-serif;
   --sacend-font: "Roboto", sans-serif;
+  --code-font: "Source Code Pro", serif;
 }
 
 * {
@@ -823,4 +826,149 @@ nav{
     padding-top: 2.25rem;
     padding-left: 0rem;
   }
+}
+
+/* ============ guide section ============ */
+#guide{
+  padding: 2rem;
+  margin: 0px;
+  background: var(--fourth-color);
+}
+
+#guide h1{
+  text-align: center;
+  color: var(--first-color);
+  margin-bottom: 1rem;
+  font-size: var(--h1-font-size);
+}
+
+#guide h2{
+  font-size: var(--h2-font-size);
+  margin-top: 1rem;
+}
+
+#guide h3{
+  font-family: var(--main-font);
+  font-size: var(--h3-font-size);
+  margin-top: 0.3rem;
+}
+
+.guide_material table {
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+
+.guide_material table td ,.guide_material table th{
+  font-family: var(--sacend-font);
+  font-size: var(--small-font-size);
+  text-align: left;
+}
+
+
+.guide_material th{
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+  border-top: 1px solid #555555;
+  border-left: 1px solid #555555;
+  border-right: 1px solid #555555;
+  border-bottom: 2px solid #555555;
+}
+
+.guide_material td{
+  padding: 1rem 2rem;
+  border: 1px solid #555555;
+}
+
+
+.guide_Steps img{
+  width: 50%;
+}
+
+.guide_Steps ol{
+  font-family: var(--sacend-font);
+  font-size: var(--normal-font-size);
+  padding-left: 30px;
+}
+
+.code-block {
+  margin-top: 0.6rem;
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.code-block code{
+  font-family: var(--code-font);
+  width: fit-content;
+}
+
+.copy-btn {
+  font-family: var(--sacend-font);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: var(--first-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: var(--normal-font-size);
+}
+
+.copy-btn:hover {
+  background-color: var(--second-color);
+}
+
+.code_download button {
+  display: none;
+  background-color: var(--second-color);
+  height: 40px;
+  border-radius: 5px;
+  border-width: 0;
+  color: var(--third-color);
+  cursor: pointer;
+  list-style: none;
+  margin-top: 0.8rem;
+  text-align: center;
+  width: 300px;
+  padding-left: 0;
+  font-size: var(--small-font-size);
+  text-decoration: none;
+}
+
+@media screen and (max-width:1024px){
+  .guide_Steps img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:900px){
+  .code-block code{
+    font-size: var(--smaller-font-size);
+  }
+  .guide_material table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:800px){
+  .code-block{
+    display: none;
+  }
+  .code_download button {
+    display: inline-block;
+  }
+
+  .guide_material th{
+    padding: 0.3rem;
+  }
+  
+  .guide_material td{
+    padding: 0.4rem;
+    border: 1px solid #555555;
+  }
+  
 }
