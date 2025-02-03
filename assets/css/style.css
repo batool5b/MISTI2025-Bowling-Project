@@ -990,7 +990,7 @@ video{
 
 @media (max-width: 950px) {
   video{
-    width: 100%;
+    width: 100vh;
   }
 }
 
