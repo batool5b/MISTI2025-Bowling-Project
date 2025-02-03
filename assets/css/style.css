@@ -986,13 +986,10 @@ nav{
 
 video{
   margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
 }
 
-@media (max-width: 950px) {
-  video{
-    width: 100vh;
-  }
-}
 
 /* footer */
 .footer {
