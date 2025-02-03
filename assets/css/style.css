@@ -988,6 +988,11 @@ video{
   margin-top: 1rem;
 }
 
+@media (max-width: 950px) {
+  video{
+    width: 100%;
+  }
+}
 
 /* footer */
 .footer {
