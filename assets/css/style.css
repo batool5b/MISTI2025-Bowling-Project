@@ -972,3 +972,64 @@ nav{
   }
   
 }
+
+/* ============ demo section ============ */
+#demo{
+  padding: 2rem;
+  margin: 0px;
+  text-align: center;
+}
+
+#demo h1{
+  color: var(--first-color);
+}
+
+video{
+  margin-top: 1rem;
+}
+
+
+/* footer */
+.footer {
+  background-color: var(--second-color);
+  color: var(--third-color);
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-content p{
+  font-size: var(--small-font-size);
+}
+
+.social-icons a {
+  color: var(--third-color);
+  font-family: var(--sacend-font);
+  font-size: var(--small-font-size);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: var(--fourth-color);
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
